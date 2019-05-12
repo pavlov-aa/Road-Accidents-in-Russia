@@ -17,6 +17,16 @@ The questions we are going to explore are:
   
   Give recommendations of saving lives
   
-  ## Getting Data
+## Getting and Flatting Data
   
-  Look at 
+Look consequently at :
+  
+Appending and Joining Tables into one.R
+  
+JSON to flat tables (csv) convertor.R
+
+## Analysis
+
+Take Analysis of data.R and data - Krasnodarskiy.krai.csv.zip
+
+## Conclusions:
