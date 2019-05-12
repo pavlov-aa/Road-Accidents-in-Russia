@@ -108,6 +108,10 @@ write.csv(ts_all,'ts_all.csv',row.names = F)
 
 
 dtp_and_ts<-merge(x = dtp_all, y = ts_all, by = "KartId", all = TRUE)
-all<-merge(x = dtp_and_ts, y = people_all, by = c("KartId","TSID"), all = TRUE)
+all<-merge(x = dtp_and_ts, y = people_all, by = "KartId", all = TRUE)
+colnames(all)
+all_filtered<-all[all$TSID.x==all$TSID.y,]
+all<-all_filtered[!is.na(all_filtered$V18),]
+
 write.csv(all,"all.csv",row.names=F)
-rm(dtp_all,dtp_and_ts,dtp2015,dtp2016,dtp2017,dtp2018,people2015,people2016,people2017,people2018,ts2015,ts2016,ts2017,ts2018)
+rm(dtp_all,dtp_and_ts,dtp2015,dtp2016,dtp2017,dtp2018,people2015,people2016,people2017,people2018,ts2015,ts2016,ts2017,ts2018,all_filtered,all1,people_all,ts_all)
