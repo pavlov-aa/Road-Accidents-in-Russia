@@ -28,5 +28,3 @@ JSON to flat tables (csv) convertor.R
 ## Analysis
 
 Take Analysis of data.R and data - Krasnodarskiy.krai.csv.zip
-
-## Conclusions:
