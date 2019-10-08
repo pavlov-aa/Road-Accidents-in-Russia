@@ -9,9 +9,9 @@ library("bit64")
 library("chron")
 
 options(stringAsFactors = T)
-list.files(path="/home/alexander/Рабочий стол/dissertation/data2/2015/csv_normalized")
+list.files(path="~/data2/2015/csv_normalized")
 # (1) Make sure where your files are located
-csv_files <- list.files (path       = "/home/alexander/Рабочий стол/dissertation/data2/2015/csv_normalized", 
+csv_files <- list.files (path       = "~/data2/2015/csv_normalized", 
                          pattern    = "*.csv", 
                          full.names = T)
 
@@ -34,7 +34,7 @@ write.csv(ts,'ts_2015.csv',row.names = F)
 write.csv(people,'people_2015.csv',row.names = F)
 
 # 2016
-csv_files <- list.files (path       = "/home/alexander/Рабочий стол/dissertation/data2/2016/csv_normalized", 
+csv_files <- list.files (path       = "~/data2/2016/csv_normalized", 
                          pattern    = "*.csv", 
                          full.names = T)
 
@@ -48,7 +48,7 @@ write.csv(people,'people_2016.csv',row.names = F)
 
 
 # 2017
-csv_files <- list.files (path       = "/home/alexander/Рабочий стол/dissertation/data2/2017/csv_normalized", 
+csv_files <- list.files (path       = "~/data2/2017/csv_normalized", 
                          pattern    = "*.csv", 
                          full.names = T)
 
@@ -63,7 +63,7 @@ write.csv(people,'people_2017.csv',row.names = F)
 
 
 # 2018
-csv_files <- list.files (path       = "/home/alexander/Рабочий стол/dissertation/data2/2018tillNov/csv_normalized", 
+csv_files <- list.files (path       = "~/data2/2018tillNov/csv_normalized", 
                          pattern    = "*.csv", 
                          full.names = T)
 main_info <- as_tibble (rbindlist (lapply (csv_files[171:255], fread)))
